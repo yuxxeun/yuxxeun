@@ -1,5 +1,4 @@
 ## Hi there! I'm Krido - fka [YUXXEUN][website] 😈
-### 아이유 사랑해!
 
 ## I'm a Student, Developer, and of course Cyclist!
 - 🌱 I’m currently learning the things I love 💑
@@ -36,3 +35,6 @@
 [twitter]: https://twitter.com/yuxxeun
 [instagram]: https://instagram.com/yuxxeun
 [linkedin]: https://www.linkedin.com/in/krido-pambudi
+
+---
+## 아이유 사랑해 ❤️
