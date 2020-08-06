@@ -1,6 +1,6 @@
 ## Hi there! I'm Krido - fka [YUXXEUN][website] 😈
 
-## I'm a Student, Developer, and of course Cyclist!
+### I'm a Student, Developer, and of course Cyclist!
 - 🌱 I’m currently learning the things I love 💑
 - 🥅 2020 Goals: Contribute more to Open Source projects
 - ⚡ Fun fact: I have dimples!
@@ -31,15 +31,15 @@
 <br />
 
 ---
+### 아이유 사랑해 ❤️
+
+<br />
+<br />
+
+---
 <img align="left" alt="yuxxeun Github Stats" src="https://github-readme-stats.vercel.app/api?username=yuxxeun&show_icons=true&hide_border=true" />
 
 [website]: https://yuxxeun.github.io
 [twitter]: https://twitter.com/yuxxeun
 [instagram]: https://instagram.com/yuxxeun
 [linkedin]: https://www.linkedin.com/in/krido-pambudi
-
-<br />
-<br />
-
----
-## 아이유 사랑해 ❤️
