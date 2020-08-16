@@ -5,7 +5,7 @@
 - ⚡ Fun fact: I have dimples!
 
 ### Connect with me:
-<a href="https://www.yuxxeun.vercel.app/">
+<a href="https://yuxxeun.github.io/">
   <img align="left" alt="YUXEEUN Facebook" width="21px" src="https://firebasestorage.googleapis.com/v0/b/github--images.appspot.com/o/Github%20images%2Fwww.svg?alt=media&token=18d94c5d-5df5-4f38-80e3-2f515df0f47d" />
 </a>
 <a href="https://twitter.com/yuxxeun">
