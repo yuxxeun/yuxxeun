@@ -7,7 +7,7 @@
 
 - 🌱 I’m currently learning **the things I love.**
 
-- 📝 I regulary write articles on [yuxxeun.github.io](yuxxeun.github.io)
+- 📝 I regulary write articles on [yuxxeun's blog](https://yuxxeun.github.io)
 
 - 💬 Ask me about **vue, laravel and more!**
 
