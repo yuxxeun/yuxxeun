@@ -5,13 +5,13 @@
 
 - 🔭 I’m currently working on [Headsynclabs](https://github.com/headsynclabs)
 
-- 🌱 I’m currently learning **the things I love.**
+- 🌱 I’m currently learning **the things that I love.**
 
 - 📝 I regulary write articles on [yuxxeun's blog](https://yuxxeun.github.io)
 
 - 💬 Ask me about **vue, laravel and more!**
 
-- 📫 How to reach me **kridospace@gmail.com**
+- 📫 How to reach me **krido@headsynclabs.tech**
 
 - ⚡ Fun fact **I have two dimples!**
 
