@@ -1,7 +1,10 @@
-<h1 align="center">Hi, I'm Krido fka YUXXEUN</h1>
+<h2 align="center">Hi 👋</h2>
 
-<p align="center">
-<a href="https://dev.to/yuxxeun" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="yuxxeun" height="30" width="30" /></a>
-<a href="https://twitter.com/yuxxeun" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="yuxxeun" height="30" width="30" /></a>
-<a href="https://instagram.com/yuxxeun" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="yuxxeun" height="30" width="30" /></a>
-</p>
+I'm [**Krido**](httos://github.com/yuxxeun) and Obsessed with tinkering (me vs rabbit hole), experiment tooling, and **projects** that's solve "interesting" problem on the web, while improving **"Developer Experience"**.   
+   
+- 🕵️ Join the club [@headsynclabs](https://github.com/headsynclabs) for "Tinkering".
+- 💬 Free for #ASK, DM me in [#Twitter](https://twitter.com/yuxxeun).
+- ✍ Write Draft in [Blog Headsynclabs](https://headsynclabs.github.io), [Personal Blog](https://yuxxeun.github.io), & Internet.
+
+<hr>
+01010100 01101000 01100001 01101110 01101011 00100000 01011001 01101111 01110101 - @yuxxeun
