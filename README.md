@@ -1,9 +1,28 @@
 ## Hi 👋
 
 I'm [**Krido**](https://github.com/yuxxeun).
-   
-- 🕵️ Join the club [@headsynclabs](https://github.com/headsynclabs) for "Tinkering".
-- 💬 Free for #ASK, DM me in [#Twitter](https://twitter.com/yuxxeun).
-- ✍ Write Draft in [Personal Blog](https://yuxxeun.github.io/talks).
 
-@yuxxeun
+
+```rescript
+
+module yuxxeun = {
+  let name = "krido"
+  let username = "yuxxeun"
+  let organization = [
+    "@headaynclabs 🌱"
+  ]
+  let city = "BNA, 🇮🇩"
+  let lang = [ "id", "en", "kr" ]
+  let interests = [
+    "functional programming",
+    "(D)X - Developer Experience",
+    "free software",
+    "tooling",
+    "self improvement",
+    "dark jokes",
+    "philosophy",
+    "some minority topic"
+  ]
+}
+
+```
