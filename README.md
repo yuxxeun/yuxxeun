@@ -1,4 +1,4 @@
-[![Yuxeun's GitHub stats](https://github-readme-stats.vercel.app/api?username=yuxeun&count_private=true&show_icons=true&theme=outrun)](https://github.com/yuxxeun/yuxxeun)
+[![Yuxeun's GitHub stats](https://github-readme-stats.vercel.app/api?username=yuxxeun&count_private=true&show_icons=true&theme=outrun)](https://github.com/yuxxeun/yuxxeun)
 
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=yuxxeun&theme=outrun&repo=minista)](https://github.com/yuxxeun/minista)
