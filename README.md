@@ -1,40 +1,11 @@
-## Hi 👋
-
-I'm [**Krido**](https://github.com/yuxxeun).
+[![Yuxeun's GitHub stats](https://github-readme-stats.vercel.app/api?username=yuxxeun&count_private=true&show_icons=true&theme=outrun)](https://github.com/yuxxeun/yuxxeun)
 
 
-```rescript
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=yuxxeun&theme=outrun&repo=minista)](https://github.com/yuxxeun/minista)
 
-                                    DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                                            Version 2, December 2004
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=yuxxeun&theme=outrun&repo=anggun)](https://github.com/yuxxeun/anggun)
 
-                         Everyone is permitted to copy and distribute verbatim or modified
-                         copies of this license document, and changing it is allowed as long
-                         as the name is changed.
-
-                                    DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                           TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
-                           You just DO WHAT THE FUCK YOU WANT TO.
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=yuxxeun&theme=outrun&repo=yuxxeun.github.io)](https://github.com/yuxxeun/yuxxeun.github.io)
 
 
-
-module yuxxeun = {
-  let name = "krido"
-  let username = "yuxxeun"
-  let organization = "@headsynclabs 🌱"
-  let city = "Seoul, 🇮🇩"
-  let lang = [ "id", "en", "kr" ]
-  let interests = [
-    "functional programming",
-    "(D)X - Developer Experience",
-    "free software",
-    "tooling",
-    "self improvement",
-    "dark jokes",
-    "philosophy",
-    "some minority topic"
-  ]
-}
-
-```
+[![Yuxeun's Top Langs](https://github-readme-stats.vercel.app/api/top-langs?username=yuxxeun&count_private=true&show_icons=true&theme=outrun)](https://github.com/yuxxeun/yuxxeun)
