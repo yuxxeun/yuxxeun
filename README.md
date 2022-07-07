@@ -1,3 +1,1 @@
-<div align="center">
-  <img src="cute-kitty.gif" alt="this is cute kitty..." width="400">
-</div>
+![header](https://github.com/yuxxeun/yuxxeun/blob/master/header.png)
