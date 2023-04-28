@@ -1,3 +1,1 @@
-<h1> ㅡ 𝓑𝓢𝓜𝓝𝓣.</h1>
-
-![hello](assets/bsmnt.jpeg)
+![hello](https://pbs.twimg.com/profile_banners/1089815197357768710/1681840470/1500x500)
