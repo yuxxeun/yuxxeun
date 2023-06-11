@@ -1,1 +1,3 @@
-![hello](https://pbs.twimg.com/profile_banners/1089815197357768710/1681840470/1500x500)
+<div align="center">
+  <img src="./assets/cute-kitty.gif" width="400" />
+</div>
